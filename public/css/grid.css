@@ -1,0 +1,183 @@
+.row {
+  box-sizing: border-box;
+  clear: both;
+  display: block;
+  min-width: 100%;
+}
+
+.row .row {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+.row:after,
+.row:before {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+hr {
+  padding: 0;
+  margin: 40px 0;
+  border: none;
+  border-bottom: 4px solid #5f6062;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  padding: 0 20px;
+}
+
+.col-1 {
+  width: 8.33333333%;
+}
+
+.col-2 {
+  width: 16.66666666%;
+}
+
+.col-3 {
+  width: 24.99999999%;
+}
+
+.col-4 {
+  width: 33.33333333%;
+}
+
+.col-5 {
+  width: 41.66666666%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333333%;
+}
+
+.col-8 {
+  width: 66.66666666%;
+}
+
+.col-9 {
+  width: 74.99999999%;
+}
+
+.col-10 {
+  width: 83.33333333%;
+}
+
+.col-11 {
+  width: 91.66666666%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.img-100 {
+  display: block;
+  width: 100%;
+}
+
+.col-center {
+  margin: 0 auto;
+  float: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-vcenter {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+
+/*-----XS-----*/
+
+@media (max-width: 700px) {
+
+  .row {
+    display: block;
+  }
+
+  .flex-xs {
+    display: flex;
+  }
+
+  .col-1-xs{
+    width: 8.333333%;
+  }
+  .col-2-xs {
+    width: 16.666666%;
+  }
+  .col-3-xs {
+    width: 24.999999%;
+  }
+  .col-4-xs {
+    width: 33.333333%;
+  }
+  .col-5-xs{
+    width: 41.666666%;
+  }
+  .col-6-xs {
+    width: 50%;
+  }
+  .col-7-xs {
+    width: 58.333333%;
+  }
+  .col-8-xs {
+    width: 66.666666%;
+  }
+  .col-9-xs {
+    width: 74.999999%;
+  }
+  .col-10-xs {
+    width: 83.333333%;
+  }
+  .col-11-xs {
+    width: 91.666666%;
+  }
+  .col-12-xs {
+    width: 100%;
+  }
+}

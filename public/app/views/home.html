@@ -1,0 +1,57 @@
+<div class="intro flex flex-vcenter">
+	<div class="content" ng-class="{show: animationStart, 'delay-off': !delay}">
+		<div class="row flex flex-vcenter">
+			<div class="col-4 col-12-xs align-center">
+				<span class="logo-wrap" ng-style="bgPositionCss">
+					<img src="img/3kalbia-logo-full.png" alt="3kalbia" class="logo logo-intro" ng-style="logoOpacity">
+				</span>
+				<a class="tool-tip-wrap align-center block">What's with the name?
+					<div class="tool-tip">
+						<p>When I was in highschool and someone told me their name I would immediately process it, and repeat it to them backwards. Mainly for fun, and to keep my brain thinking differently. Everyone started calling me Ekalb, which is my name backwards. I ran with it.</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-8 col-12-xs">
+				<h1>My name is Blake Detherage.</h1>
+				<p>Ever since I can remember I have been drawing. I'm a designer, a painter, an illustrator, a photographer, and an artist. I enjoy working with clients and creative teams, and helping them bring out their best work. </p>
+				<p>I'm passionate about taking concepts, developing them, and delivering them into this world. Whatever it may be.</p>
+				<div class="row">
+					<div class="col-6 col-12-xs col-center">
+						<a ng-click="scrollTo('my-work')" class="btn btn-light">View My Work</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<hr>
+					</div>
+				</div>
+				<div class="row social-bar">
+					<div class="col-3"><a href="https://www.behance.net/3kalb" class="social-behance" target="_blank"> </a></div>
+					<div class="col-3"><a href="https://www.facebook.com/3kalbia" class="social-facebook" target="_blank"> </a></div>
+					<div class="col-3"><a href="https://www.instagram.com/3kalbia" class="social-instagram" target="_blank"> </a></div>
+					<div class="col-3"><a href="https://twitter.com/3kalb" class="social-twitter" target="_blank"> </a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="grid-page" id="my-work">
+	<div class="row">
+		<div class="col-12">
+			<h2>My Work</h2>
+		</div>
+	</div>
+	<div class="row portfolio-image-section flex flex-wrap">
+		<div ng-repeat="project in projects | filter:filter"  class="col-4 col-12-xs repeat-animation">
+			<a ng-href="#!/project/{{project.id}}"><img ng-src="{{ project.main }}" alt="project" class="responsive-img"/></a>
+			<div class="portfolio-project-caption">
+				<p>{{ project.name }}</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-4">
+			
+		</div>
+	</div>
+</div>

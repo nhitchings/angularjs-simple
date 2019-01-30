@@ -1,0 +1,26 @@
+<a href="" class="details-arrow details-arrow-prev" ng-click="prevProject()"></a>
+<a href="" class="details-arrow details-arrow-next" ng-click="nextProject()"></a>
+<div class="grid-page">
+	<div class="row">
+		<div class="col-12">
+			<h1>{{projects[activeProject].name}}</h1>
+			<img ng-src="{{ projects[activeProject].main }}" alt="{{projects[activeProject].name}}">
+			<p>{{projects[activeProject].description}}</p>
+			<div class="row">
+				<dov class="col-6" ng-repeat="img in projects[activeProject].imgs">
+					<img ng-src="{{ img }}" alt="{{projects[activeProject].name}}">
+				</dov>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<a href="#!/#my-work" class="btn">Back to portfolio</a>
+		</div>
+	</div>
+</div>

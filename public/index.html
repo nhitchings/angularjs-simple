@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="portfolio">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3kalbia | Bleeding Rainbows</title>
+	<!--build:css css/main.min.css -->
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- endbuild -->
+</head>
+<body ng-controller="MainController as main">
+<div style="display: none;"><img src="img/3kalbia-logo-full.png" alt=""><img src="img/logo-sprite.png" alt=""></div>
+	<ng-view ng-cloak></ng-view>
+	<footer>
+		<div class="grid-page">
+			<div class="row flex flex-vcenter">
+				<div class="col-8 col-12-xs">
+					<h3>Featured Work</h3>
+					<div class="row featured-projects">
+						<div class="col-6 col-12-xs" ng-repeat="project in main.projects | limitTo: 4">
+							<a ng-href="#!/project/{{project.id}}">{{project.name}}</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 col-12-xs social-bar  align-center">
+					<a href="https://www.behance.net/3kalb" class="social-behance" target="_blank"></a>
+					<a href="https://www.facebook.com/3kalbia" class="social-facebook" target="_blank"></a>
+					<a href="https://www.instagram.com/3kalbia" class="social-instagram" target="_blank"></a>
+					<a href="https://twitter.com/3kalb" class="social-twitter" target="_blank"></a>
+				</div>
+				<div class="col-2 col-12-xs">
+					<img src="img/3kalbia-logo-white.png" class="logo" alt="3kalbia">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<p class="align-center"><em><small>3kalbia {{main.year}}</em></small></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--build:js scripts/vendor.min.js -->
+	<script src="/vendor/angular/angular.js"></script>
+	<script src="/vendor/angular-route/angular-route.js"></script>
+	<script src="/vendor/angular-animate/angular-animate.js"></script>
+	<!-- endbuild -->
+	<!--build:js scripts/main.min.js -->
+	<script src="/app/app.js"></script>
+	<script src="/app/templates/templates.js"></script>
+	<script src="/app/controllers/main-controller.js"></script>
+	<script src="/app/controllers/home-controller.js"></script>
+	<script src="/app/controllers/project-controller.js"></script>
+	<script src="/app/services/projects-service.js"></script>
+	<script src="/app/directives/loaded-directive.js"></script>
+	<!-- endbuild -->
+</body>
+</html>
